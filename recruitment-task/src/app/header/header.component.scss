@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #0a0d10;
   display: flex;
   color: #fff;
@@ -6,26 +9,39 @@
   justify-content: space-between;
   padding: 2em;
 
-  .header__logo--wrapper {
-    background-color: #9a9a9a;
-    padding: 16px;
-    border-radius: 50%;
+  &__logo-wrapper {
     display: grid;
     place-items: center;
+    background-color: #9a9a9a;
+    padding: 1em;
+    border-radius: 50%;
     transition: 250ms;
-    cursor: pointer;
 
     &:hover {
       background-color: #e98206;
     }
   }
 
-  span {
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     font-weight: normal;
     font-size: 1.8em;
 
-    strong {
+    .header__title strong {
       font-weight: bold;
     }
+
+    .header__candidate {
+      font-weight: 200;
+      font-size: 0;
+      overflow: hidden;
+      transition: 250ms;
+    }
+  }
+
+  &:has(.header__logo-wrapper:hover) .header__candidate {
+    font-size: inherit;
   }
 }

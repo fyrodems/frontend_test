@@ -1,0 +1,18 @@
+<footer class="footer">
+
+    <div class="footer__flex-wrapper">
+        <div class="footer__rotating" [innerHTML]="formatText(notRotatingText)"></div>
+    </div>
+
+    <small class="footer__company">nabthat</small>
+
+    <div class="footer__flex-wrapper">
+        <button class="footer__show-options">pokaż
+            <input type="checkbox" role="state-controller">
+        </button>
+    </div>
+
+    <div class="footer__options-wrapper">
+        <app-footer-options></app-footer-options>
+    </div>
+</footer>

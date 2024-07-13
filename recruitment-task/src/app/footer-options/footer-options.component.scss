@@ -1,0 +1,18 @@
+ul {
+  list-style-type: "\003E";
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    padding-left: 10px;
+    color: #000;
+    transition: 250ms;
+    cursor: pointer;
+
+    &:hover {
+      color: #e98206;
+    }
+  }
+}
