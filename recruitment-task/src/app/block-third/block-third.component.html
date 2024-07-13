@@ -1,8 +1,4 @@
-<h2>{{sectionTitle}}</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique efficitur libero, sed commodo libero
-    semper vitae. Vestibulum vestibulum eget est et cursus. Suspendisse ornare mollis consectetur. Fusce dapibus
-    faucibus nisl, sit amet vestibulum nisi pharetra ac. Donec tortor ante, facilisis sed efficitur iaculis, tincidunt
-    ut mauris. Nam sollicitudin dignissim diam. Nulla neque lorem, facilisis vel enim ac, pretium laoreet dolor.
-    Phasellus fermentum, purus ut porttitor vulputate, nisl orci porttitor est, ut semper erat nisi eu turpis. Sed
-    vulputate augue vitae neque euismod, iaculis varius mauris pharetra.</p>
+<h2>{{ sectionTitle }}</h2>
+<div *ngFor="let content of contents">
+    <p>{{ content }}</p>
+</div>

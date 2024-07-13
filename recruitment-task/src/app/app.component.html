@@ -4,8 +4,9 @@
   <h1 class="main__title">{{title}}</h1>
   <div class="content">
     <app-block-first></app-block-first>
-    <app-block-second></app-block-second>
-    <app-block-third></app-block-third>
+    <app-block-second (replaceContent)="blockThird.replaceContent($event)"
+      (appendContent)="blockThird.appendContent($event)"></app-block-second>
+    <app-block-third #blockThird></app-block-third>
   </div>
 </main>
 
