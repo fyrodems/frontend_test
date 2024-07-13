@@ -1,4 +1,30 @@
-main {
+.main {
   min-height: calc(100vh - 144px);
   background-color: #2a2d36;
+  padding-top: 200px;
+  color: #fff;
+
+  &__title {
+    position: relative;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 400;
+
+    // text-decoration-line: underline;
+    // text-underline-offset: 14px;
+
+    // border-bottom: 1px solid;
+    width: fit-content;
+    margin: 0 auto;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 15%;
+      height: 1px;
+      width: 70%;
+      background-color: #fff;
+    }
+  }
 }
