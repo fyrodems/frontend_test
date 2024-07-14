@@ -3,9 +3,11 @@
 <main class="main">
   <h1 class="main__title">{{title}}</h1>
   <div class="content">
+    <!-- <div class="content__section-wrapper"> -->
     <app-block-first></app-block-first>
     <app-block-second (replaceContent)="blockThird.replaceContent($event)"
       (appendContent)="blockThird.appendContent($event)"></app-block-second>
+    <!-- </div> -->
     <app-block-third #blockThird></app-block-third>
   </div>
 </main>

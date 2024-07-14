@@ -1,25 +1,37 @@
+@use "./styles/mixins.scss" as m;
+
 .main {
-  min-height: calc(100vh - 144px);
+  min-height: calc(100vh - 136px);
   background-color: #2a2d36;
-  padding-top: 200px;
-  color: #fff;
+  padding-top: 150px;
+
+  @include m.tablet {
+    min-height: calc(100vh - 144px);
+  }
 
   &__title {
     position: relative;
     text-align: center;
-    font-size: 2.5em;
     font-weight: 400;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -1rem;
+      bottom: -0.5em;
       left: 15%;
       height: 1px;
       width: 70%;
-      background-color: #fff;
+      background-color: #9a9a9a;
+    }
+  }
+
+  .content {
+    @include m.grid(repeat(2, 1fr), 1fr);
+
+    :nth-child(3) {
+      grid-column-end: span 2;
     }
   }
 }

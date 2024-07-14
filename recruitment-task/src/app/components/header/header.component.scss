@@ -24,10 +24,10 @@
     }
 
     img {
-      @include m.photo-params(40px);
+      @include m.square-params(40px);
 
       @include m.tablet {
-        @include m.photo-params(50px);
+        @include m.square-params(50px);
       }
     }
 

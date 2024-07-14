@@ -120,11 +120,11 @@
     }
 
     &:hover {
-      color: #fff;
-      border-color: #fff;
+      color: #f1f1f1;
+      border-color: #f1f1f1;
 
       &::after {
-        border-color: #fff;
+        border-color: #f1f1f1;
       }
     }
 
@@ -155,7 +155,7 @@
     padding: 1em 2em;
     transform: translateZ(-1px);
     transition: top 500ms;
-    background-color: #fff;
+    background-color: #f1f1f1;
     box-shadow: 0px 0px 24px 2px #000;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;

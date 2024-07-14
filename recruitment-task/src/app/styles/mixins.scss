@@ -78,12 +78,6 @@
   position: $position;
 }
 
-@mixin vertical-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 @mixin absolute-position($top, $right, $bottom, $left) {
   position: absolute;
   top: $top;
@@ -98,24 +92,7 @@
   white-space: nowrap;
 }
 
-@mixin cover-background {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-@mixin limit-and-center($width) {
-  max-width: $width;
-  margin: 0 auto;
-}
-
-@mixin center-link {
-  width: fit-content;
-  display: block;
-  margin: 0 auto;
-}
-
-@mixin photo-params($param) {
+@mixin square-params($param) {
   width: $param;
   height: $param;
 }

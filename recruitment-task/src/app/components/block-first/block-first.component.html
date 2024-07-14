@@ -1,11 +1,11 @@
-<h2>{{ sectionTitle }}</h2>
+<section class="section-wrapper">
+    <h2 class="section__title">{{ sectionTitle }}</h2>
 
-<div class="option-picker-wrapper">
-    <div *ngFor="let option of options; let i = index">
+    <div class="option-picker-wrapper" *ngFor="let option of options; let i = index">
         <div class="radio">
-            <input type="radio" id="{{ option.id }}" name="optionsGroup" [(ngModel)]="selectedOption"
-                [value]="option.value" (change)="setSelectedOption()" />
-            <label for="{{ option.id }}">{{ option.name }}</label>
+            <input type="radio" id="{{ option.id }}" name="optionsGroup" class="radio__input"
+                [(ngModel)]="selectedOption" [value]="option.value" (change)="setSelectedOption()" />
+            <label for="{{ option.id }}" class="radio__input-label">{{ option.name }}</label>
         </div>
     </div>
-</div>
+</section>
