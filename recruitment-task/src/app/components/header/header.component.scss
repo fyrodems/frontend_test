@@ -1,12 +1,13 @@
 @use "../../styles/mixins.scss" as m;
+@use "../../styles/variables.scss" as v;
 
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #0a0d10;
+  background-color: v.$bg-header-n-footer;
   display: flex;
-  color: #f1f1f1;
+  color: v.$font-light;
   align-items: center;
   justify-content: space-between;
   padding: 1.5em 2em;
@@ -14,7 +15,7 @@
   &__logo-wrapper {
     display: grid;
     place-items: center;
-    background-color: #303030;
+    background-color: v.$bg-logo;
     padding: 12px;
     border-radius: 50%;
     transition: 250ms;
@@ -36,7 +37,7 @@
     }
 
     &:hover {
-      background-color: #e98206;
+      background-color: v.$color-accent;
     }
   }
 

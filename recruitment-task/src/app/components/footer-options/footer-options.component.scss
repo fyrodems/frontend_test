@@ -1,3 +1,5 @@
+@use "../../styles/variables.scss" as v;
+
 .footer-options {
   list-style-type: "\003E";
   text-transform: uppercase;
@@ -7,12 +9,12 @@
 
   li {
     padding-left: 10px;
-    color: #000;
+    color: v.$font-footer;
     transition: 250ms;
     cursor: pointer;
 
     &:hover {
-      color: #e98206;
+      color: v.$color-accent;
     }
   }
 }

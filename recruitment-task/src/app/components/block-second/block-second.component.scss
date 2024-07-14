@@ -1,4 +1,5 @@
 @use "../../styles/mixins.scss" as m;
+@use "../../styles/variables.scss" as v;
 
 .section-wrapper {
   margin: 0 20px 50px;
@@ -23,15 +24,15 @@
 .button {
   cursor: pointer;
   background-color: transparent;
-  color: #9a9a9a;
+  color: v.$font-dark;
   text-transform: uppercase;
   border: 1px solid #9a9a9a;
   padding: 15px 70px;
   transition: 250ms;
 
   &:hover {
-    border-color: #f1f1f1;
-    color: #f1f1f1;
-    background-color: #e98206;
+    border-color: v.$font-light;
+    color: v.$font-light;
+    background-color: v.$color-accent;
   }
 }
