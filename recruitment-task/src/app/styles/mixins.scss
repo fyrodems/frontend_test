@@ -48,23 +48,6 @@
   flex-direction: column;
 }
 
-@mixin flex-center-vert {
-  display: flex;
-  align-items: center;
-}
-
-@mixin flex-center-horiz {
-  display: flex;
-  justify-content: center;
-}
-
-@mixin flex-custom($direction, $justify, $align) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-}
-
 @mixin grid($columns, $rows) {
   display: grid;
   grid-template-columns: $columns;
@@ -72,19 +55,6 @@
 }
 
 //utils
-@mixin pseudo($display: block, $position: absolute, $content: "") {
-  content: $content;
-  display: $display;
-  position: $position;
-}
-
-@mixin absolute-position($top, $right, $bottom, $left) {
-  position: absolute;
-  top: $top;
-  right: $right;
-  bottom: $bottom;
-  left: $left;
-}
 
 @mixin square-params($param) {
   width: $param;
