@@ -1,30 +1,14 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+import data from '../../assets/data.json';
+
 @Injectable({
   providedIn: 'root',
 })
 export class ContentService {
-  private defaultContents: string[] = [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    'Maecenas tristique efficitur libero, sed commodo libero semper vitae.',
-    'Vestibulum vestibulum eget est et cursus.',
-    'Suspendisse ornare mollis consectetur.',
-    'Fusce dapibus faucibus nisl, sit amet vestibulum nisi pharetra ac.',
-    'Donec tortor ante, facilisis sed efficitur iaculis, tincidunt ut mauris.',
-  ];
-  private additionalContents: string[] = [
-    'Pierwsza treść',
-    'Druga treść',
-    'Trzecia treść',
-    'Czwarta treść',
-    'Piąta treść',
-    'Szósta treść',
-    'Siódma treść',
-    'Ósma treść',
-    'Dziewiąta treść',
-    'Dziesiąta treść',
-  ];
+  private defaultContents: string[] = data.defaultContents;
+  private additionalContents: string[] = data.additionalContents;
   private storageKey = 'contents';
 
   private contentsSubject = new BehaviorSubject<string[]>(this.defaultContents);
@@ -42,9 +26,9 @@ export class ContentService {
       this.additionalContents =
         parsedContents.additionalContents || this.additionalContents;
     } else {
-      this.saveContents(); // Save default contents if nothing in localStorage
+      this.saveContents();
     }
-    this.contentsSubject.next(this.defaultContents); // Emit default contents initially
+    this.contentsSubject.next(this.defaultContents);
   }
 
   private saveContents() {
@@ -53,7 +37,7 @@ export class ContentService {
       additionalContents: this.additionalContents,
     };
     localStorage.setItem(this.storageKey, JSON.stringify(contentsToSave));
-    this.contentsSubject.next(this.defaultContents); // Emit default contents after saving
+    this.contentsSubject.next(this.defaultContents);
   }
 
   getDefaultContents(): string[] {
@@ -65,14 +49,7 @@ export class ContentService {
   }
 
   resetContents() {
-    this.defaultContents = [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      'Maecenas tristique efficitur libero, sed commodo libero semper vitae.',
-      'Vestibulum vestibulum eget est et cursus.',
-      'Suspendisse ornare mollis consectetur.',
-      'Fusce dapibus faucibus nisl, sit amet vestibulum nisi pharetra ac.',
-      'Donec tortor ante, facilisis sed efficitur iaculis, tincidunt ut mauris.',
-    ];
+    this.defaultContents = data.defaultContents;
     this.saveContents();
   }
 
@@ -94,6 +71,7 @@ export class ContentService {
   getContentsObservable() {
     return this.contentsSubject.asObservable();
   }
+
   getContentByOption(option: string): string {
     switch (option) {
       case '1st':

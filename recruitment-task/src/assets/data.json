@@ -1,5 +1,5 @@
 {
-    "contents": [
+    "additionalContents": [
         "Pierwsza treść",
         "Druga treść",
         "Trzecia treść",
@@ -10,5 +10,13 @@
         "Ósma treść",
         "Dziewiąta treść",
         "Dziesiąta treść"
+    ],
+    "defaultContents": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Maecenas tristique efficitur libero, sed commodo libero semper vitae.",
+        "Vestibulum vestibulum eget est et cursus.",
+        "Suspendisse ornare mollis consectetur.",
+        "Fusce dapibus faucibus nisl, sit amet vestibulum nisi pharetra ac.",
+        "Donec tortor ante, facilisis sed efficitur iaculis, tincidunt ut mauris."
     ]
 }
