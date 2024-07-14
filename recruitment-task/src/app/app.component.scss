@@ -3,10 +3,14 @@
 .main {
   min-height: calc(100vh - 136px);
   background-color: #2a2d36;
-  padding-top: 150px;
+  padding: 150px 50px;
 
   @include m.tablet {
     min-height: calc(100vh - 144px);
+  }
+
+  @include m.laptop {
+    padding-top: 200px;
   }
 
   &__title {
@@ -32,6 +36,15 @@
 
     :nth-child(3) {
       grid-column-end: span 2;
+    }
+
+    @include m.laptop {
+      display: flex;
+
+      > * {
+        flex: 1 1 0;
+        width: 0;
+      }
     }
   }
 }

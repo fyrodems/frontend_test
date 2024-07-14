@@ -4,12 +4,20 @@
   margin: 0 20px 50px;
   @include m.flex-column;
   align-items: flex-end;
+
+  @include m.laptop {
+    align-items: center;
+  }
 }
 
 .buttons-wrapper {
   @include m.flex-column;
   gap: 10px;
   width: fit-content;
+
+  @include m.desktop-large {
+    flex-direction: row;
+  }
 }
 
 .button {
