@@ -1,7 +1,7 @@
+@use "../../styles/mixins.scss" as m;
+
 .footer {
-  //   position: fixed;
   position: relative;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -71,24 +71,29 @@
   }
 
   &__company {
-    position: relative;
-    &::before,
-    &::after {
-      content: "";
+    display: none;
+
+    @include m.tablet {
       display: block;
-      position: absolute;
-      width: 50%;
-      height: 2px;
-      background-color: #303030;
-      top: 50%;
-    }
+      position: relative;
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: #303030;
+        top: 50%;
+      }
 
-    &::before {
-      left: -70%;
-    }
+      &::before {
+        left: -70%;
+      }
 
-    &::after {
-      right: -70%;
+      &::after {
+        right: -70%;
+      }
     }
   }
 
@@ -97,7 +102,7 @@
     text-transform: uppercase;
     background: transparent;
     border: 1px solid #303030;
-    color: #303030;
+    color: #9a9a9a;
     padding: 15px 115px 15px 90px;
     transition: 250ms;
 
@@ -106,7 +111,7 @@
       position: absolute;
       top: 42%;
       right: 28%;
-      border: solid #303030;
+      border: solid #9a9a9a;
       border-width: 0 2px 2px 0;
       display: inline-block;
       padding: 4px;
