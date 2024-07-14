@@ -38,10 +38,10 @@
       font-size: 0;
       overflow: hidden;
       transition: 250ms;
-    }
-  }
 
-  &:has(.header__logo-wrapper:hover) .header__candidate {
-    font-size: inherit;
+      &.header__candidate--active {
+        font-size: inherit;
+      }
+    }
   }
 }
