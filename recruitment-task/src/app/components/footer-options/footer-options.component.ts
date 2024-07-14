@@ -19,5 +19,12 @@ export class FooterOptionsComponent {
 
   showPersonalData() {
     this.headerStateService.togglePersonalData();
+    console.log();
+  }
+
+  generatePersonalDataLabel() {
+    return this.headerStateService.getShowPersonalData()
+      ? 'ukryj dane osobowe'
+      : 'pokaż dane osobowe';
   }
 }
