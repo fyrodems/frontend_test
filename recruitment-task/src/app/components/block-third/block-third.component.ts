@@ -10,6 +10,9 @@ export class BlockThirdComponent implements OnInit {
   sectionTitle =
     'Blok z długą nazwą, która sama się przytnieeeeeeeeeee, bo jest długaaaa';
   contents: string[] = [];
+  allAdditionalContents: string[] = [];
+  hasSelected1st: boolean = false;
+  hasSelected2nd: boolean = false;
 
   constructor(private contentService: ContentService) {}
 
@@ -17,10 +20,16 @@ export class BlockThirdComponent implements OnInit {
     this.contentService.getContentsObservable().subscribe((contents) => {
       this.contents = contents;
     });
+
+    this.allAdditionalContents = this.contentService.getAdditionalContents();
   }
 
   replaceContent(newContent: string) {
     this.contents = [newContent];
+    this.hasSelected1st =
+      newContent === this.contentService.getContentByOption('1st');
+    this.hasSelected2nd =
+      newContent === this.contentService.getContentByOption('2nd');
   }
 
   appendContent(newContent: string) {
@@ -28,7 +37,32 @@ export class BlockThirdComponent implements OnInit {
       this.contents.push(newContent);
       this.contents.sort();
     } else {
-      alert('Ta treść już istnieje.');
+      if (newContent === this.contentService.getContentByOption('1st')) {
+        if (this.hasSelected1st) {
+          alert('Treść pierwsza została już doklejona.');
+          return;
+        }
+        this.hasSelected1st = true;
+      } else if (newContent === this.contentService.getContentByOption('2nd')) {
+        if (this.hasSelected2nd) {
+          alert('Treść druga została już doklejona.');
+          return;
+        }
+        this.hasSelected2nd = true;
+      } else {
+        let newRandomContent = this.contentService.getContentByOption('any');
+        while (this.contents.includes(newRandomContent)) {
+          newRandomContent = this.contentService.getContentByOption('any');
+        }
+        this.contents.push(newRandomContent);
+        this.contents.sort();
+      }
+    }
+
+    if (this.contents.length >= this.allAdditionalContents.length) {
+      alert(
+        'Nie można dodać więcej treści, wszystkie opcje zostały wykorzystane.'
+      );
     }
   }
 }
