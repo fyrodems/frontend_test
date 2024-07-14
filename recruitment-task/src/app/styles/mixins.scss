@@ -86,12 +86,6 @@
   left: $left;
 }
 
-@mixin text-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 @mixin square-params($param) {
   width: $param;
   height: $param;

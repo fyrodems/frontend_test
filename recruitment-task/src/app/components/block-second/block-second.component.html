@@ -1,5 +1,7 @@
-<section>
+<section class="section-wrapper">
     <h2 class="section__title">{{ sectionTitle }}</h2>
-    <button (click)="replace()">zastąp</button>
-    <button (click)="append()">doklej</button>
+    <div class="buttons-wrapper">
+        <button (click)="replace()" class="button">zastąp</button>
+        <button (click)="append()" class="button">doklej</button>
+    </div>
 </section>

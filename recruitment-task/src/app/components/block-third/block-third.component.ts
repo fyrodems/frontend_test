@@ -8,7 +8,7 @@ import { ContentService } from '../../services/content.service';
 })
 export class BlockThirdComponent implements OnInit {
   sectionTitle =
-    'Blok z długą nazwą która sama się przytnieeeeeeeeeee, bo jest długaaaa';
+    'Blok z długą nazwą, która sama się przytnieeeeeeeeeee, bo jest długaaaa';
   contents: string[] = [];
 
   constructor(private contentService: ContentService) {}

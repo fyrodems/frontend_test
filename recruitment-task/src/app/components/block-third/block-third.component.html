@@ -1,6 +1,6 @@
-<section>
+<section class="section-wrapper">
     <h2 class="section__title">{{ sectionTitle }}</h2>
-    <div *ngFor="let content of contents">
-        <article>{{ content }}</article>
+    <div class="section__content">
+        <article *ngFor="let content of contents">{{ content }}</article>
     </div>
 </section>

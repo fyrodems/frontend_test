@@ -1,0 +1,29 @@
+@use "../../styles/mixins.scss" as m;
+
+.section-wrapper {
+  margin: 0 20px 50px;
+  @include m.flex-column;
+  align-items: flex-end;
+}
+
+.buttons-wrapper {
+  @include m.flex-column;
+  gap: 10px;
+  width: fit-content;
+}
+
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  color: #9a9a9a;
+  text-transform: uppercase;
+  border: 1px solid #9a9a9a;
+  padding: 15px 70px;
+  transition: 250ms;
+
+  &:hover {
+    border-color: #f1f1f1;
+    color: #f1f1f1;
+    background-color: #e98206;
+  }
+}

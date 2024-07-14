@@ -1,0 +1,16 @@
+@use "../../styles/mixins.scss" as m;
+
+.section-wrapper {
+  .section__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 20px;
+  }
+
+  .section__content {
+    @include m.flex-center-column;
+    gap: 5px;
+    text-align: center;
+  }
+}
