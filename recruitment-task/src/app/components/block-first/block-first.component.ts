@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SelectedOptionService } from '../selected-option.service';
+import { SelectedOptionService } from '../../services/selected-option.service';
 
 @Component({
   selector: 'app-block-first',
@@ -17,8 +17,7 @@ export class BlockFirstComponent {
 
   constructor(private selectedOptionService: SelectedOptionService) {}
 
-  logSelectedOption() {
+  setSelectedOption() {
     this.selectedOptionService.setSelectedOption(this.selectedOption);
-    console.log('Selected option:', this.selectedOption);
   }
 }

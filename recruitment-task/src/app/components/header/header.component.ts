@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderData } from './header.interface';
-import { HeaderStateService } from '../header-state.service';
+import { HeaderStateService } from '../../services/header-state.service';
 
 @Component({
   selector: 'app-header',

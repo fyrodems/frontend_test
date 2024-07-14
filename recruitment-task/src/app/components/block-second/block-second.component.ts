@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { ContentService } from '../content.service';
-import { SelectedOptionService } from '../selected-option.service';
+import { ContentService } from '../../services/content.service';
+import { SelectedOptionService } from '../../services/selected-option.service';
 
 @Component({
   selector: 'app-block-second',

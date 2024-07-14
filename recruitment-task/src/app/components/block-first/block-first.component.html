@@ -4,7 +4,7 @@
     <div *ngFor="let option of options; let i = index">
         <div class="radio">
             <input type="radio" id="{{ option.id }}" name="optionsGroup" [(ngModel)]="selectedOption"
-                [value]="option.value" (change)="logSelectedOption()" />
+                [value]="option.value" (change)="setSelectedOption()" />
             <label for="{{ option.id }}">{{ option.name }}</label>
         </div>
     </div>

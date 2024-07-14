@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ContentService } from '../content.service';
-import { HeaderStateService } from '../header-state.service';
+import { ContentService } from '../../services/content.service';
+import { HeaderStateService } from '../../services/header-state.service';
 
 @Component({
   selector: 'app-footer-options',
@@ -14,10 +14,10 @@ export class FooterOptionsComponent {
   ) {}
 
   resetSettings() {
-    this.contentService.resetContents(); // Reset both default and additional contents
+    this.contentService.resetContents();
   }
 
   showPersonalData() {
-    this.headerStateService.togglePersonalData(); // Toggle personal data visibility
+    this.headerStateService.togglePersonalData();
   }
 }
